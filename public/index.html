@@ -29,7 +29,9 @@
                 console.log('connected');
             });
 
-            socket.on('message-from-server', (data) => {});
+            socket.on('current-bands', (data) => {
+                console.log(data);
+            });
         </script>
     </body>
 </html>
