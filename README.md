@@ -1,4 +1,4 @@
-# Socket Band App Backend
+# Socket Bands App Backend
 
 ## Technologies
 
