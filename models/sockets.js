@@ -14,6 +14,12 @@ class Sockets {
 
             // emit to the connected client all current bands
             socket.emit('current-bands', this.bandList.getBands());
+
+            // vote for the band
+            socket.on('vote-band', ({ id }) => {
+                this.bandList.increaseVote(id);
+                this.io.emit('current-bands', this.bandList.getBands());
+            });
         });
     }
 }
